@@ -26,8 +26,8 @@ describe("Bank", function() {
     assert.strictEqual(bank.accounts.length, 4);
   });
 
-  xit("should be able to find an account by owner name", function() {
-    assert.deepEqual(bank.accountByName("Craig"), account4);
+  it("should be able to find an account by owner name", function() {
+    assert.deepEqual(bank.accountByName("Craig"), [account4]);
   });
 
   xit("should be able to find an account with highest value", function() {
