@@ -40,5 +40,16 @@ Bank.prototype.averageValue = function () {
   return average;
 };
 
+Bank.prototype.largestAccount = function () {
+  const valuesArray = this.accounts.map(function(account){
+    return account.value;
+  });
+  const maxValue = Math.max.apply(Math, valuesArray);
+  const maxAccountArray = this.accounts.filter(function(account){
+    return account.value === maxValue;
+  });
+  return maxAccountArray[0];
+};
+
 
 module.exports = Bank;
