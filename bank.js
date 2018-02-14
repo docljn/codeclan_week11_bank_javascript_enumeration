@@ -13,5 +13,13 @@ Bank.prototype.accountByName = function (accountHolderName) {
   return accountsSelected;
 };
 
+Bank.prototype.payInterest = function (){
+  const accountsAfterInterestPaid = this.accounts.map(function(account){
+    account.value *= 1.1;
+    return account;
+  });
+  return accountsAfterInterestPaid;
+};
+
 
 module.exports = Bank;
