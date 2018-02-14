@@ -33,7 +33,7 @@ describe("Bank", function() {
   });
 
   it("should be able to find an account with highest value", function() {
-    assert.deepEqual(bank.largestAccount(), account3);
+    assert.deepEqual(bank.largestAccount(), [account3]);
   });
 
   it("should be able to add 10% interest to all accounts", function() {

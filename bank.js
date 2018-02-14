@@ -48,7 +48,7 @@ Bank.prototype.largestAccount = function () {
   const maxAccountArray = this.accounts.filter(function(account){
     return account.value === maxValue;
   });
-  return maxAccountArray[0];
+  return maxAccountArray;
 };
 
 
