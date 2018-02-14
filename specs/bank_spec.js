@@ -1,3 +1,5 @@
+/* global it, describe, beforeEach, xit*/
+
 var assert = require("assert");
 var Bank = require("../bank.js");
 var Account = require("../account.js");
@@ -50,7 +52,7 @@ describe("Bank", function() {
     assert.deepStrictEqual(bank.businessAccounts(), [account2, account4]);
   });
 
-  xit("should be able to find total value of all acounts", function() {
+  it("should be able to find total value of all acounts", function() {
     assert.strictEqual(bank.totalValue(), 155);
   });
 
